@@ -1,0 +1,9 @@
+Practical no 1:
+import tensorflow as tf
+import numpy as np
+from numpy.linalg import eig
+A=np.arange(1,5).reshape(2,2)
+B=np.arange(5,9).reshape(2,2)
+print(A,"\n",B)
+C=tf.matmul(A,B)
+eigen_values_C,eigen_vectors_C= eig(C)
