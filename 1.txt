@@ -1,9 +1,12 @@
 Practical no 1:
 import tensorflow as tf
-import numpy as np
-from numpy.linalg import eig
-A=np.arange(1,5).reshape(2,2)
-B=np.arange(5,9).reshape(2,2)
-print(A,"\n",B)
-C=tf.matmul(A,B)
-eigen_values_C,eigen_vectors_C=eig(C)
+import numpy
+from numpy.linalg import eig 
+a=tf.constant ([1,2,3,4,5,6],shape=[2,3])
+b=tf.constant ([7,8,9,10,11,12],shape=[3,2])
+print(a,'\n',b)
+c=tf.matmul(a,b)
+print(c)
+eigen_values,eigen_vectors=eig(c)
+print("Eigen:\n",c)
+
